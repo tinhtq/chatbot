@@ -22,14 +22,13 @@ class AppCreator:
                 allow_methods=["*"],
                 allow_headers=["*"],
             )
-        Initializer()
 
         # set routes
         @self.app.get("/")
         def root():
             return "service is working"
 
-        # self.app.include_router(routers)
+        self.app.include_router(routers)
 
 
 app_creator = AppCreator()

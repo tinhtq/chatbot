@@ -10,6 +10,8 @@ python-dotenv = "*"
 uvicorn = "*"
 fastapi = "*"
 pydantic-settings = "*"
+langchain = "*"
+fastembed = "*"
 
 [dev-packages]
 
