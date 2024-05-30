@@ -12,8 +12,10 @@ ENV: str = ""
 class Configs(BaseSettings):
     # base
     ENV: str = os.getenv("ENV")
+    API: str = "/api"
     BASEMODEL_URL: str = os.getenv("BASEMODEL_URL")
-
+    PROJECT_NAME: str = os.getenv("PROJECT_NAME")
+    BACKEND_CORS_ORIGINS: List[str] = ["*"]
     class Config:
         case_sensitive = True
 
