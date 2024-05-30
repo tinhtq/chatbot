@@ -6,6 +6,6 @@ load_dotenv()
 
 llm = Ollama(model="llama3", base_url=os.getenv("BASEMODEL_URL"))
 
-resp = llm.invoke("Tell about the story")
+resp = llm.invoke("Tell me about Joe Biden")
 
 print(resp)
