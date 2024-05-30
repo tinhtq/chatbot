@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+langchain-community = "*"
+ollama = "*"
 
 [dev-packages]
 
