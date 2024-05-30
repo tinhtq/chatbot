@@ -16,5 +16,5 @@ docker exec ollama ollama pull llama3
 Execute the below command to create `requirements.txt` file
 
 ```bash
-pip freeze > requirements.txt
+pipenv requirements > requirements.txt
 ```
