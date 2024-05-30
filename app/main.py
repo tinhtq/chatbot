@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from app.api import routers as routers
 from app.core import configs
-from app.services import Initializer
 
 
 class AppCreator:
