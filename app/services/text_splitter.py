@@ -1,5 +1,4 @@
 import io
-from tempfile import NamedTemporaryFile
 
 from fastapi import HTTPException
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -14,13 +13,6 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=20,
 
 def handle_pdf(file):
     loader = PDFPlumberLoader(file)
-    # print("hello")
-    # docs = loader.load_and_split()
-    return "hello"
-
-
-def convert_pdf(upload_file):
-    contents = upload_file.file.read()
-    temp_file = io.BytesIO()
-    temp_file.write(contents)
-    return temp_file
+    docs = loader.load_and_split()
+    chunks = text_splitter.split_documents(docs)
+    return len(chunks)
