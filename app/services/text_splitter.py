@@ -13,10 +13,10 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=20,
 
 
 def handle_pdf(file):
-    loader = PDFPlumberLoader(file.file)
-    print("hello")
-    docs = loader.load_and_split()
-    return len(docs)
+    loader = PDFPlumberLoader(file)
+    # print("hello")
+    # docs = loader.load_and_split()
+    return "hello"
 
 
 def convert_pdf(upload_file):
