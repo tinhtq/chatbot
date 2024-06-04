@@ -4,6 +4,11 @@ from fastapi import HTTPException
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 from langchain_community.document_loaders.pdf import PDFPlumberLoader
+from langchain_community.vectorstores import Chroma
+
+folder_path = "db"
+
+
 
 embedding = FastEmbedEmbeddings()
 
