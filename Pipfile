@@ -7,6 +7,14 @@ name = "pypi"
 langchain-community = "*"
 ollama = "*"
 python-dotenv = "*"
+uvicorn = "*"
+fastapi = "*"
+pydantic-settings = "*"
+langchain = "*"
+fastembed = "*"
+pdfplumber = "*"
+python-multipart = "*"
+langchain-text-splitters = "*"
 
 [dev-packages]
 

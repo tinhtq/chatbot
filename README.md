@@ -10,3 +10,11 @@ Pull model llama3
 ```
 docker exec ollama ollama pull llama3  
 ```
+
+## Setup
+
+Execute the below command to create `requirements.txt` file
+
+```bash
+pipenv requirements > requirements.txt
+```
