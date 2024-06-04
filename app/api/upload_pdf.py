@@ -1,5 +1,5 @@
 from fastapi import APIRouter, UploadFile, File
-from app.services import handle_pdf, convert_pdf
+from app.services import handle_pdf
 import shutil
 import os
 

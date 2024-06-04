@@ -1,6 +1,6 @@
 from langchain_community.llms import Ollama
 from app.core import configs
-from .text_splitter import handle_pdf, convert_pdf
+from .text_splitter import handle_pdf
 
 
 class Initializer:
