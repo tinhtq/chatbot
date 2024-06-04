@@ -14,9 +14,9 @@ def invoke(uploaded_file: UploadFile = File(...)):
         file_location = f"files/{uploaded_file.filename}"
         with open(file_location, "wb+") as file_object:
             shutil.copyfileobj(uploaded_file.file, file_object)
-        resp = handle_pdf(file_location)
+        docs_len = handle_pdf(file_location)
     except Exception as e:
         return {"error": str(e)}
     finally:
         uploaded_file.file.close()
-    return {"message": f"Successfully {resp}"}
+    return {"message": f"Successfully uploaded","file_name": uploaded_file.filename, "docs_len": docs_len}

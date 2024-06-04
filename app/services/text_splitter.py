@@ -8,8 +8,6 @@ from langchain_community.vectorstores import Chroma
 
 folder_path = "db"
 
-
-
 embedding = FastEmbedEmbeddings()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=20, length_function=len,
@@ -20,4 +18,8 @@ def handle_pdf(file):
     loader = PDFPlumberLoader(file)
     docs = loader.load_and_split()
     chunks = text_splitter.split_documents(docs)
-    return len(chunks)
+    vector_store = Chroma.from_documents(
+        documents=chunks, embedding=embedding, persist_directory=folder_path
+    )
+    vector_store.persist()
+    return  len(docs)
