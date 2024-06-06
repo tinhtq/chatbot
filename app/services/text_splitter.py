@@ -22,4 +22,4 @@ def handle_pdf(file):
         documents=chunks, embedding=embedding, persist_directory=folder_path
     )
     vector_store.persist()
-    return  len(docs)
+    return len(docs)
