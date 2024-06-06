@@ -1,1 +1,7 @@
 images
+db
+files
+docker-compose.yaml
+Pipfile
+Pipfile.lock
+.gitignore
