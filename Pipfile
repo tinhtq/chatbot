@@ -15,6 +15,7 @@ fastembed = "*"
 pdfplumber = "*"
 python-multipart = "*"
 langchain-text-splitters = "*"
+chromadb = "*"
 
 [dev-packages]
 
