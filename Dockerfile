@@ -7,6 +7,8 @@ WORKDIR /app
 # Copy the requirements file to the working directory
 COPY requirements.txt .
 
+ENV HNSWLIB_NO_NATIVE=1
+
 # Install the Python dependencies
 RUN pip install -r requirements.txt
 
